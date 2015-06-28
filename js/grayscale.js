@@ -188,7 +188,7 @@ function initMap() {
 function createMap() {
     map = new BMap.Map("map");
     // map.centerAndZoom(new BMap.Point(114.35055, 30.518877), 18);
-    map.centerAndZoom(new BMap.Point(114.382246, 30.506271), 13);
+    map.centerAndZoom(new BMap.Point(114.382246, 30.586271), 13);
 }
 
 function setMapEvent() {
