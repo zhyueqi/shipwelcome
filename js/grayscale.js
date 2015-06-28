@@ -188,7 +188,7 @@ function initMap() {
 function createMap() {
     map = new BMap.Map("map");
     // map.centerAndZoom(new BMap.Point(114.35055, 30.518877), 18);
-    map.centerAndZoom(new BMap.Point(114.382246,30.556271),13);
+    map.centerAndZoom(new BMap.Point(114.382246, 30.556271), 13);
 }
 
 function setMapEvent() {
@@ -206,7 +206,7 @@ function addClickHandler(target, window) {
 
 function addMapOverlay() {
         var markers = [{
-            content: "我的备注",
+            content: "",
             title: "武汉理工大学计算机学院",
             imageOffset: {
                 width: 0,
@@ -217,15 +217,15 @@ function addMapOverlay() {
                 lng: 114.350262
             }
         }, {
-            content: "我的备注",
+            content: "",
             title: "武汉理工大学航运学院",
             imageOffset: {
                 width: 0,
                 height: 3
             },
             position: {
-                lat: 30.608526,
-                lng: 114.364271
+                lat: 30.608925,
+                lng: 114.36507
             }
         }];
         for (var index = 0; index < markers.length; index++) {
