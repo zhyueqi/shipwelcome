@@ -185,10 +185,11 @@ function initMap() {
     addMapOverlay(); //向地图添加覆盖物
 }
 
-function createMap(){ 
-      map = new BMap.Map("map"); 
-      map.centerAndZoom(new BMap.Point(114.35055,30.518877),18);
-    }
+function createMap() {
+    map = new BMap.Map("map");
+    // map.centerAndZoom(new BMap.Point(114.35055, 30.518877), 18);
+    map.centerAndZoom(new BMap.Point(114.382246,30.556271),13);
+}
 
 function setMapEvent() {
     map.enableScrollWheelZoom();
@@ -203,26 +204,50 @@ function addClickHandler(target, window) {
     });
 }
 
-function addMapOverlay(){
-      var markers = [
-        {content:"",title:"计算机科学与技术学院",imageOffset: {width:0,height:3},position:{lat:30.519281,lng:114.350299}}
-      ];
-      for(var index = 0; index < markers.length; index++ ){
-        var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
-        var marker = new BMap.Marker(point,{icon:new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png",new BMap.Size(20,25),{
-          imageOffset: new BMap.Size(markers[index].imageOffset.width,markers[index].imageOffset.height)
-        })});
-        var label = new BMap.Label(markers[index].title,{offset: new BMap.Size(25,5)});
-        var opts = {
-          width: 200,
-          title: markers[index].title,
-          enableMessage: false
+function addMapOverlay() {
+        var markers = [{
+            content: "我的备注",
+            title: "武汉理工大学计算机学院",
+            imageOffset: {
+                width: 0,
+                height: 3
+            },
+            position: {
+                lat: 30.519237,
+                lng: 114.350262
+            }
+        }, {
+            content: "我的备注",
+            title: "武汉理工大学航运学院",
+            imageOffset: {
+                width: 0,
+                height: 3
+            },
+            position: {
+                lat: 30.608526,
+                lng: 114.364271
+            }
+        }];
+        for (var index = 0; index < markers.length; index++) {
+            var point = new BMap.Point(markers[index].position.lng, markers[index].position.lat);
+            var marker = new BMap.Marker(point, {
+                icon: new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png", new BMap.Size(20, 25), {
+                    imageOffset: new BMap.Size(markers[index].imageOffset.width, markers[index].imageOffset.height)
+                })
+            });
+            var label = new BMap.Label(markers[index].title, {
+                offset: new BMap.Size(25, 5)
+            });
+            var opts = {
+                width: 200,
+                title: markers[index].title,
+                enableMessage: false
+            };
+            var infoWindow = new BMap.InfoWindow(markers[index].content, opts);
+            marker.setLabel(label);
+            addClickHandler(marker, infoWindow);
+            map.addOverlay(marker);
         };
-        var infoWindow = new BMap.InfoWindow(markers[index].content,opts);
-        marker.setLabel(label);
-        addClickHandler(marker,infoWindow);
-        map.addOverlay(marker);
-      };
     }
     //向地图添加控件
 function addMapControl() {
