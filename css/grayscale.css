@@ -91,8 +91,8 @@ a:focus {
 }
 
 .navbar-custom a {
-    color: #c2e0f4;
-    /*color: #000;*/
+    /*color: #c2e0f4;*/
+    color: #000;
 }
 
 .navbar-custom .nav li a {
@@ -278,7 +278,9 @@ a:focus {
     background-size: cover;
     -o-background-size: cover;
 }
-
+#about h2{
+    color: rgb(41,74,87);
+}
 #map {
     width: 100%;
     height: 400px;
