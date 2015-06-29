@@ -278,6 +278,9 @@ a:focus {
     background-size: cover;
     -o-background-size: cover;
 }
+#about{
+    
+}
 #about h2{
     color: rgb(41,74,87);
 }
@@ -347,7 +350,7 @@ ul.banner-social-buttons {
 
 footer {
     padding: 50px 0;
-    background-color: rgb(52, 152, 219);
+    background-color: rgb(41,74,87);
     color: #fff;
 }
 
