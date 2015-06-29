@@ -63,6 +63,7 @@ a:focus {
 }
 
 .navbar-custom {
+
     margin-bottom: 0;
     border-bottom: 1px solid rgba(255, 255, 255, .3);
     text-transform: uppercase;
@@ -91,6 +92,7 @@ a:focus {
 
 .navbar-custom a {
     color: #c2e0f4;
+    /*color: #000;*/
 }
 
 .navbar-custom .nav li a {
@@ -154,8 +156,9 @@ a:focus {
     text-align: center;
     color: #fff;
     /*background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;*/
-    
-    background-color: rgb(52, 152, 219);
+    background: url(../img/ocean.jpg) no-repeat bottom center scroll; 
+    /*background: url(../img/green.png) no-repeat bottom center scroll;*/
+    /*background-color: rgb(52, 152, 219);*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
