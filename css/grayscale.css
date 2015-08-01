@@ -91,7 +91,7 @@ a:focus {
 }
 
 .navbar-custom a {
-    /*color: #c2e0f4;*/
+    color: #c2e0f4;
     color: #000;
 }
 
@@ -103,7 +103,8 @@ a:focus {
 
 .navbar-custom .nav li a:hover {
     outline: 0;
-    color: #DBD334;
+    /*color: #DBD334;*/
+    text-decoration:underline;
     background-color: transparent;
 }
 
